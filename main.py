@@ -13,16 +13,16 @@ def main():
     #LOOP
     for cnt in range(N_max):
         do_func(0)
-    #4.結果まとめ表示
 
 def do_func(idx):#再帰関数として使いたい
     if idx < idx_max:
         #2.randamに1文字出力
         int_rand = rnd.randint(0,9)
-        print(int_rand,end=" ")
         #3.照合
         if int_rand == number_PI[idx]:
+            print(int_rand,end=" ")
             print(pppPI[idx])
+            idx+=1
             do_func(idx+1)  #再帰利用
         print("\n")
 
